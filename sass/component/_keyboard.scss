@@ -1,0 +1,43 @@
+.keyboard__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  // border: 1px solid black;
+}
+.k-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #535ad9;
+  border-radius: 10px;
+  margin: 1%;
+  cursor: pointer;
+  @include media-tablet {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1%;
+  }
+  @include media-mobile {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5%;
+    border-radius: 15px;
+  }
+}
+
+.active {
+  background-color: #e6d28a;
+  pointer-events: none;
+  user-select: none;
+}

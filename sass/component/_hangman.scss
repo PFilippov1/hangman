@@ -1,0 +1,145 @@
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+.h-head {
+  background-image: url("asset/img/head.svg");
+  position: absolute;
+  top: 14rem;
+  right: 4rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10.2rem;
+  height: 10.2rem;
+  @include media-tablet {
+    top: 9rem;
+    right: 6rem;
+  }
+  @include media-mobile {
+    top: 2rem;
+    right: 9rem;
+  }
+}
+.l-arm {
+  background-image: url("asset/img/hand-one.svg");
+  position: absolute;
+  top: 26rem;
+  right: 9rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 6.7rem;
+  height: 8rem;
+  @include media-tablet {
+    top: 17rem;
+    right: 9.9rem;
+  }
+  @include media-mobile {
+    top: 6.5rem;
+    right: 11.8rem;
+  }
+}
+.r-arm {
+  background-image: url("asset/img/hand-two.svg");
+  position: absolute;
+  top: 26rem;
+  right: 3rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 6.7rem;
+  height: 8rem;
+  @include media-tablet {
+    top: 17rem;
+    right: 6rem;
+  }
+  @include media-mobile {
+    top: 6.5rem;
+    right: 9.9rem;
+  }
+}
+.l-leg {
+  background-image: url("asset/img/leg-one.svg");
+  position: absolute;
+  top: 37rem;
+  right: 9rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 6.7rem;
+  height: 8rem;
+  @include media-tablet {
+    top: 23rem;
+    right: 9.9rem;
+  }
+  @include media-mobile {
+    top: 9.5rem;
+    right: 11.8rem;
+  }
+}
+.r-leg {
+  background-image: url("asset/img/leg-two.svg");
+  position: absolute;
+  top: 37rem;
+  right: 3rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 6.7rem;
+  height: 8rem;
+  @include media-tablet {
+    top: 23rem;
+    right: 6rem;
+  }
+  @include media-mobile {
+    top: 9.5rem;
+    right: 10rem;
+  }
+}
+.h-body {
+  background-image: url("asset/img/body.svg");
+  position: absolute;
+  top: 24rem;
+  right: 9rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 0.5rem;
+  height: 13.1rem;
+  @include media-tablet {
+    top: 14.5rem;
+    right: 11rem;
+  }
+  @include media-mobile {
+     top: 4rem;
+    right: 14rem;
+  }
+}
+
+.h-head,
+.l-arm,
+.r-arm,
+.l-leg,
+.r-leg,
+.h-body {
+  transform: scale(1);
+  @include media-tablet {
+    transform: scale(0.6);
+  }
+  @include media-mobile {
+    transform: scale(0.3);
+  }
+}

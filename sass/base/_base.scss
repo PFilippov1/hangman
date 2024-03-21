@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -354,6 +354,17 @@ template {
   padding: 0;
   box-sizing: border-box;
 }
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -361,17 +372,54 @@ html {
 }
 
 body {
-  // @include font($size:1.6rem, $weight:600, $height:125%);
   font-family: "Inter", Verdana, sans-serif;
   font-size: 1.6rem;
-  // color: $color-text-dark;
+  max-height: 100vh;
 }
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 136rem;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 20px 10px;
+}
+.keyboard-text__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 98rem;
+  flex-grow: 1;
+}
+
 h1 {
-  // @include font(7.2rem, normal, 600, 105%);
-  // font-family: Inter;
-  // font-size: 7.2rem;
-  // font-style: normal;
-  // font-weight: 600;
-  // line-height: 105%; /* 75.6px */
-  // color: $color-text-dark;
+  font-family: Inter;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%; /* 75.6px */
+  
 }
+
+
+  @media (max-width: 769px) {
+    .game-name {
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 105%; /* 75.6px */
+    }
+  }
+  @media (max-width: 381px) {
+    .game-name {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 105%; /* 75.6px */
+    }
+  }
+
+

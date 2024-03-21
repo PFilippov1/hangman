@@ -1,0 +1,48 @@
+.numb-attempts-red {
+  color: red;
+}
+.guess-word {
+  font-weight: 600;
+  font-size: 5rem;
+  margin-bottom: 5rem;
+  padding-top: 10rem;
+  letter-spacing: 1rem;
+  @include media-tablet {
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    letter-spacing: 1rem;
+  }
+  @include media-mobile {
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.word-hint,
+.attempts {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  @include media-tablet {
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  @include media-mobile {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+.guess-word-hidden__hint{
+  visibility: hidden;
+}
+.game__result{
+  text-align: center;
+}
